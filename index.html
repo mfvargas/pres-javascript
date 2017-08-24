@@ -1,0 +1,209 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Fundamentos de CSS para desarrollo de aplicaciones geoespaciales en la Web</title>
+		
+		<meta name="description" content="Fundamentos de CSS para desarrollo de aplicaciones geoespaciales en la Web">
+		<meta name="author" content="Manuel Vargas">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">		
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>Desarrollo de aplicaciones geoespaciales en la Web</h2>
+					<h3>Fundamentos de CSS</h3>
+					<p>
+						<small>Manuel Vargas (mvargas@inbio.ac.cr)</small>
+					</p>
+				</section>
+				<section>
+					<h2>CSS</h2>
+					    <ul>
+					        <p><strong>CSS (Cascading Style Sheets)</strong> es un lenguaje de diseño gráfico para describir la <strong>presentación</strong> de un documento escrito en un lenguaje de marcas (ej. HTML).</p>
+					        <p>Permite describir aspectos de diseño como <strong>colores, tipos y tamaños de letra, márgenes, alineamientos y muchos otros.</strong></p>
+					    </ul>
+				</section>
+				<section>
+					<h2>CSS</h2>
+					    <ul>
+					        <p><strong>Permite manejar la presentación separadamente del contenido</strong>, lo que brinda una mayor una flexibilidad en el diseño.</p>
+					        <p>Por ejemplo, <strong>varios archivos HTML pueden compartir una misma presentación</strong> al hacer referencia a un mismo archivo CSS.</p>
+					        <p>También posibilita un despliegue diferenciado de acuerdo a los tipos y tamaños de pantallas.</p>
+					    </ul>
+				</section>
+				<section>
+					<h2>Historia de CSS</h2>
+					    <ul>
+					        <p>Fue propuesto por <strong>Håkon Wium</strong> Lie, quien trabajaba en CERN con Tim Berners-Lee, en 1994.</p>
+					        <p>Al igual que HTML, <strong>CSS es un estándar de W3C</strong>. En la actualidad, <strong>la versión más utilizada es la 3 (CSS3)</strong>.</p>
+					    </ul>
+				</section>
+				<section>
+					<h2>Sintaxis de CSS</h2>
+					    <ul>
+					        <p>Las propiedades de estilo se especifican mediante construcciones de la forma:</p>
+                            <p><figure><img src="http://en-support.files.wordpress.com/2011/09/css-selectors-lrg.png" alt="Selector CSS"><figcaption><small>Sintaxis de CSS. Fuente: wordpress.com</small></figcaption></figure></p>
+                            <p>Hay una lista de propiedades en <a href="https://www.w3schools.com/cssref/">CSS Reference</a></p>
+					    </ul>
+				</section>
+				<section>
+					<h2>Ejemplos de sintaxis CSS</h2>
+					    <pre><code class="hljs" data-trim contenteditable>
+                        p {
+                            color:red;
+                            font-size:200%;
+                        }
+					    </code></pre>
+					    <pre><code class="hljs" data-trim contenteditable>
+                        h1 {
+                            color:blue;
+                            background-color:yellow;
+                        }
+					    </code></pre>
+					    <pre><code class="hljs" data-trim contenteditable>
+                        body {
+                            background-color:black;
+                            color:white;
+                            font-family:Arial;
+                            margin:0 4px 0 0;
+                            border:12px solid;
+                        }
+					    </code></pre>	
+				</section>				
+				<section>
+					<h2>¿En dónde especificar propiedades CSS?</h2>
+					    <p>Un navegador web busca propiedades CSS en:</p>
+					    <ol>
+					        <li>Elementos HTML (ej. <em>body, h1, table</em>, ...)</li>
+					        <li>La sección <em>head</em> de un documento HTML</li>
+					        <li>Archivos externos (.css)</li>
+					        <li>La configuración por defecto del navegador</li>
+					    </ol>
+				</section>
+				<section>
+					<h2>Propiedades CSS en elementos HTML</h2>
+					    <pre><code class="hljs" data-trim contenteditable>
+                            &lt;h1 style="color:blue"&gt;Encabezado estilizado&lt;/h1&gt;
+					    </code></pre>
+					    <h3>¡Esta forma no es recomendada!</h3>
+					    <ul>
+					        <p>No se cumple la separación entre contenido y estilo</p>					    
+					    </ul>
+				</section>
+				<section>
+					<h2>Propiedades CSS en la sección <em>head</em></h2>
+					    <pre><code class="hljs" data-trim contenteditable>
+                            &lt;head&gt;
+                                &lt;title&gt;Ejemplo de CSS especificado en la sección head&lt;/title&gt;
+                                &lt;style&gt;
+                                    h1 {
+                                        color:blue;
+                                    }
+                                &lt;/style&gt;
+                            &lt;/head&gt;
+					    </code></pre>
+				</section>				
+				<section>
+					<h2>Propiedades CSS en archivos externos (.css)</h2>
+					    <ul>
+					        <p>En la sección <em>head</em> del archivo HTML que va a usar los estilos, debe incluirse un elemento de tipo <em>link</em>:</p>
+					    </ul>
+					    <pre><code class="hljs" data-trim contenteditable>
+                            &lt;link rel="stylesheet" href="estilos.css"&gt;
+					    </code></pre>
+				</section>
+				<section>
+					<h2>Propiedades CSS en archivos externos (.css)</h2>
+					    <ul>
+					        <p>Contenido de <em>estilos.css</em>:</p>
+					        <pre><code class="hljs" data-trim contenteditable>
+                                p {
+                                    color:red;
+                                    font-size:200%;
+                                }
+                                
+                                h1 {
+                                    background-color:yellow;
+                                }            
+                                
+                                body {
+                                    background-color:black;
+                                    color:white;
+                                    margin:0 4px 0 0;
+                                    border:12px solid;
+                                }                                    
+					        </code></pre>					        
+					    </ul>
+				</section>				
+				<section>
+					<h2>Ejercicio</h2>
+					    <ul>
+					        <p>Construya un sitio web con información sobre la especie de aves "Jabirú" o "Galán sin ventura" (<em>Jabiru mycteria</em>). El sitio debe tener tres páginas:</p>
+					        <ul>
+					            <li><strong>index.html</strong>: con información general sobre la especie</a></li>
+					            <li><strong>distribucion.html</strong>: con un mapa de "My Google Maps" con los registros de presencia de la especie</li>		
+					            <li><strong>imagenes.html</strong>: con una lista de imágenes de la especie</li>						            			            
+					        </ul>
+					    </ul>
+				</section>			
+				<section>
+					<h2>Ejercicio</h2>
+					    <ul>
+					        <p>Fuentes de información:</p>
+					        <ul>
+					            <li><strong>Información general sobre la especie: </strong><a href="https://es.wikipedia.org/wiki/Jabiru_mycteria">Wikispecies</a></li>
+					            <li><strong>Registros de presencia de la especie: </strong>archivo proporcionado por el profesor</li>
+					            <li><strong>Imágenes: </strong><a href="https://demo.gbif.org/occurrence/gallery?q=jabiru%20m&country=CR&has_coordinate=true&has_geospatial_issue=false&taxon_key=2481953">GBIF y iNaturalist</a></li>
+					        </ul>
+					    </ul>
+				</section>
+				<section>
+					<h2>Ejercicio</h2>
+					    <ul>
+    			            <p>Cree un archivo llamado estilos.css que, para los tres archivos, especifique: el tipo y tamaño de letra, el color de fondo y el color de los encabezados.</p>
+    			            <p>En cada página, cree una barra de navegación que permita navegar a las otras dos páginas. Para esto utilice el elemento <a href="https://www.w3schools.com/tags/tag_nav.asp">nav</a>.</p>
+				            <p>Referencie las diferentes fuentes de información (textos, imágenes, etc.). Utilice los elementos <a href="https://www.w3schools.com/tags/tag_cite.asp">cite</a> y <a href="https://www.w3schools.com/tags/tag_figure.asp">figure</a>.</p>
+					    </ul>
+				</section>				
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
