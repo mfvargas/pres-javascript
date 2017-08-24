@@ -38,152 +38,208 @@
 					</p>
 				</section>
 				<section>
-					<h2>CSS</h2>
+					<h2>JavaScript</h2>
 					    <ul>
-					        <p><strong>CSS (Cascading Style Sheets)</strong> es un lenguaje de diseño gráfico para describir la <strong>presentación</strong> de un documento escrito en un lenguaje de marcas (ej. HTML).</p>
-					        <p>Permite describir aspectos de diseño como <strong>colores, tipos y tamaños de letra, márgenes, alineamientos y muchos otros.</strong></p>
+					        <p><strong>JavaScript (JS)</strong> es un lenguaje de programación utilizado para añadir <strong>interactividad</strong> a las páginas web.</p>
+					        <p>Junto con HTML y CSS, JS es una de las tres principales tecnologías para la producción de contenido en la Web.</p>
 					    </ul>
 				</section>
 				<section>
-					<h2>CSS</h2>
+					<h2>Historia de JavaScript</h2>
 					    <ul>
-					        <p><strong>Permite manejar la presentación separadamente del contenido</strong>, lo que brinda una mayor una flexibilidad en el diseño.</p>
-					        <p>Por ejemplo, <strong>varios archivos HTML pueden compartir una misma presentación</strong> al hacer referencia a un mismo archivo CSS.</p>
-					        <p>También posibilita un despliegue diferenciado de acuerdo a los tipos y tamaños de pantallas.</p>
+					        <p>Fue creado en 1995 por <strong>Brendan Eich</strong>, con el fin de dar interactividad a las páginas web leídas con el navegador <a href="https://en.wikipedia.org/wiki/Netscape_%28web_browser%29">Netscape</a>.</p>
+					        <p>En la actualidad, es utilizado por todos los <a href="https://en.wikipedia.org/wiki/Usage_share_of_web_browsers">principales navegadores web</a> y en la mayoría de los sitios web.</p>
 					    </ul>
 				</section>
 				<section>
-					<h2>Historia de CSS</h2>
+					<h2>Características de JavaScript</h2>
 					    <ul>
-					        <p>Fue propuesto por <strong>Håkon Wium</strong> Lie, quien trabajaba en CERN con Tim Berners-Lee, en 1994.</p>
-					        <p>Al igual que HTML, <strong>CSS es un estándar de W3C</strong>. En la actualidad, <strong>la versión más utilizada es la 3 (CSS3)</strong>.</p>
+					        <li>Se ejecuta en el <strong>cliente (i.e. navegador web)</strong></li>
+					        <li>Es un lenguage <strong>interpretado</strong></li>
+					        <li>Permite el uso de varios paradigmas de programación, incluyendo la <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS">programación orientada a objetos</a></li>
 					    </ul>
 				</section>
 				<section>
-					<h2>Sintaxis de CSS</h2>
+					<h2>¿Qué puede hacerse con JavaScript?</h2>
 					    <ul>
-					        <p>Las propiedades de estilo se especifican mediante construcciones de la forma:</p>
-                            <p><figure><img src="http://en-support.files.wordpress.com/2011/09/css-selectors-lrg.png" alt="Selector CSS"><figcaption><small>Sintaxis de CSS. Fuente: wordpress.com</small></figcaption></figure></p>
-                            <p>Hay una lista de propiedades en <a href="https://www.w3schools.com/cssref/">CSS Reference</a></p>
+					        <li>Controlar multimedia</li>
+					        <li>Reaccionar a "eventos" (ej. presionar un botón)</li>
+					        <li>Modificar dinámicamente el contenido de una página web</li>
+					        <li><strong>¡Manejar mapas interactivos!</strong></li>
+					        <li>Y muchas, muchas, cosas más...</li>
 					    </ul>
 				</section>
 				<section>
-					<h2>Ejemplos de sintaxis CSS</h2>
+					<h2>"Hola mundo" en JavaScript</h2>
 					    <pre><code class="hljs" data-trim contenteditable>
-                        p {
-                            color:red;
-                            font-size:200%;
-                        }
+                            &lt;!DOCTYPE html&gt;
+                            &lt;html lang="es"&gt;
+                                &lt;head&gt;
+                                    &lt;title&gt;Hola mundo&lt;/title&gt;
+                                    &lt;meta charset="UTF-8"&gt; 
+                                    &lt;script&gt;
+                                        function holaMundo () {
+                                            alert("¡Hola mundo!");
+                                        }        
+                                    &lt;/script&gt;
+                                &lt;/head&gt;
+                                &lt;body&gt;
+                                    &lt;button type="button" onclick="holaMundo()"&gt;
+                                        Presióneme
+                                    &lt;/button&gt;        
+                                &lt;/body&gt;
+                            &lt;/html&gt;
 					    </code></pre>
-					    <pre><code class="hljs" data-trim contenteditable>
-                        h1 {
-                            color:blue;
-                            background-color:yellow;
-                        }
-					    </code></pre>
-					    <pre><code class="hljs" data-trim contenteditable>
-                        body {
-                            background-color:black;
-                            color:white;
-                            font-family:Arial;
-                            margin:0 4px 0 0;
-                            border:12px solid;
-                        }
-					    </code></pre>	
-				</section>				
+				</section>	
 				<section>
-					<h2>¿En dónde especificar propiedades CSS?</h2>
-					    <p>Un navegador web busca propiedades CSS en:</p>
-					    <ol>
-					        <li>Elementos HTML (ej. <em>body, h1, table</em>, ...)</li>
-					        <li>La sección <em>head</em> de un documento HTML</li>
-					        <li>Archivos externos (.css)</li>
-					        <li>La configuración por defecto del navegador</li>
-					    </ol>
-				</section>
-				<section>
-					<h2>Propiedades CSS en elementos HTML</h2>
-					    <pre><code class="hljs" data-trim contenteditable>
-                            &lt;h1 style="color:blue"&gt;Encabezado estilizado&lt;/h1&gt;
-					    </code></pre>
-					    <h3>¡Esta forma no es recomendada!</h3>
+					<h2>El tag &lt;script&gt;</h2>
 					    <ul>
-					        <p>No se cumple la separación entre contenido y estilo</p>					    
-					    </ul>
-				</section>
-				<section>
-					<h2>Propiedades CSS en la sección <em>head</em></h2>
-					    <pre><code class="hljs" data-trim contenteditable>
-                            &lt;head&gt;
-                                &lt;title&gt;Ejemplo de CSS especificado en la sección head&lt;/title&gt;
-                                &lt;style&gt;
-                                    h1 {
-                                        color:blue;
-                                    }
-                                &lt;/style&gt;
-                            &lt;/head&gt;
-					    </code></pre>
-				</section>				
-				<section>
-					<h2>Propiedades CSS en archivos externos (.css)</h2>
-					    <ul>
-					        <p>En la sección <em>head</em> del archivo HTML que va a usar los estilos, debe incluirse un elemento de tipo <em>link</em>:</p>
-					    </ul>
-					    <pre><code class="hljs" data-trim contenteditable>
-                            &lt;link rel="stylesheet" href="estilos.css"&gt;
-					    </code></pre>
-				</section>
-				<section>
-					<h2>Propiedades CSS en archivos externos (.css)</h2>
-					    <ul>
-					        <p>Contenido de <em>estilos.css</em>:</p>
+					        <p>El tag <a href="https://www.w3schools.com/tags/tag_script.asp">&lt;script&gt;</a> se utiliza para incluir un <em>script</em> en JS. Puede contener el código o una referencia a un archivo.</p>
 					        <pre><code class="hljs" data-trim contenteditable>
-                                p {
-                                    color:red;
-                                    font-size:200%;
-                                }
+                                &lt;script&gt;
+                                    function holaMundo () {
+                                        alert("¡Hola mundo!");
+                                    }        
+                                &lt;/script&gt;
                                 
-                                h1 {
-                                    background-color:yellow;
-                                }            
+                                &lt;script src="js/misfunciones.js"&gt;&lt;/script&gt;
                                 
-                                body {
-                                    background-color:black;
-                                    color:white;
-                                    margin:0 4px 0 0;
-                                    border:12px solid;
-                                }                                    
+                                &lt;script src="https://maps.googleapis.com/maps/api/js"&gt;&lt;/script&gt;
 					        </code></pre>					        
 					    </ul>
-				</section>				
+				</section>
 				<section>
-					<h2>Ejercicio</h2>
+					<h2>Eventos en HTML y JS</h2>
 					    <ul>
-					        <p>Construya un sitio web con información sobre la especie de aves "Jabirú" o "Galán sin ventura" (<em>Jabiru mycteria</em>). El sitio debe tener tres páginas:</p>
-					        <ul>
-					            <li><strong>index.html</strong>: con información general sobre la especie</a></li>
-					            <li><strong>distribucion.html</strong>: con un mapa de "My Google Maps" con los registros de presencia de la especie</li>		
-					            <li><strong>imagenes.html</strong>: con una lista de imágenes de la especie</li>						            			            
-					        </ul>
+					        <p>Los <a href="https://www.w3schools.com/js/js_events.asp">eventos</a> son fragmentos de código que se activan con la ocurrencia de sucesos como, por ejemplo: terminar la carga de una página web, llenar un campo de entrada de datos o presionar un <a href="https://www.w3schools.com/tags/tag_button.asp">botón</a>.
+					        </p>
+					        <pre><code class="hljs" data-trim contenteditable>
+                                &lt;button type="button" onclick="alert('¡Hola mundo!');"&gt;
+                                    Presióneme
+                                &lt;/button&gt;
+					        </code></pre>					        
 					    </ul>
-				</section>			
+				</section>	
 				<section>
-					<h2>Ejercicio</h2>
+					<h2>El Document Object Model</h2>
 					    <ul>
-					        <p>Fuentes de información:</p>
-					        <ul>
-					            <li><strong>Información general sobre la especie: </strong><a href="https://es.wikipedia.org/wiki/Jabiru_mycteria">Wikispecies</a></li>
-					            <li><strong>Registros de presencia de la especie: </strong>archivo proporcionado por el profesor</li>
-					            <li><strong>Imágenes: </strong><a href="https://demo.gbif.org/occurrence/gallery?q=jabiru%20m&country=CR&has_coordinate=true&has_geospatial_issue=false&taxon_key=2481953">GBIF y iNaturalist</a></li>
-					        </ul>
+					        <p><figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/DOM-model.svg/500px-DOM-model.svg.png" alt="Elemento HTML" width="450"><figcaption><small>El Document Object Model (DOM). Fuente: <a href="https://commons.wikimedia.org/wiki/Category:Document_object_models#/media/File:DOM-model.svg">Wikipedia</a></small></figcaption></figure></p>
+					    </ul>
+				</section>	
+				<section>
+					<h2>El Document Object Model</h2>
+					    <ul>
+                            <p>El <a href="https://www.w3schools.com/js/js_htmldom.asp">Document Object Model (DOM)</a> es una representación jerárquica de los objetos que componen una página web.</p>
+                            <p>Es también una interfaz de programación que permite que un programador tenga acceso para leer y modificar los elementos, atributos, estilos y eventos de un documento HTML.</p>
+                        </ul>
+				</section>	
+				<section>
+					<h2>Acceso al DOM mediante JS</h2>
+					    <ol>
+                            <li>Observe el <a href="https://codepen.io/mfvargas/pen/rzKggx">ejemplo en CodePen</a></li>
+                            <li>Cree una <a href="https://codepen.io/accounts/signup/user/free">cuenta gratuita en CodePen</a></li>
+                            <li>Bifurque (<em>fork</em>) el <a href="https://codepen.io/mfvargas/pen/rzKggx">ejemplo</a> hacia su cuenta</li>
+                            <li>Reproduzca el ejemplo en tres archivos en su computadora: <em>index.html</em>, <em>css/estilos.css</em> y <em>js/funciones.js</em>. Recuerde establecer (con &lt;link&gt; y &lt;script&gt;) los enlaces a los otros archivos desde <em>index.html</em>.</li>
+                        </ul>
+				</section>
+			    <section>
+					<h2>El atributo id</h2>
+					    <ul>
+					        <p>El <a href="https://www.w3schools.com/tags/att_global_id.asp">atributo id</a> establece un identificador único para cada elemento HTML de una página. Es utilizado en JS para acceder programáticamente al DOM.</p>
+					        <pre><code class="hljs" data-trim contenteditable>
+                                &lt;button type="button" 
+                                onclick="document.getElementById('fechaYhora').innerHTML = Date();"&gt;
+                                    Presióneme
+                                &lt;/button&gt;
+                                
+                                &lt;p id="fechaYhora"&gt;&lt;/p&gt;
+					        </code></pre>	
+					    </ul>
+				</section>
+			    <section>
+					<h2>El atributo class</h2>
+					    <ul>
+					        <p>El <a href="https://www.w3schools.com/tags/att_global_class.asp">atributo class</a> establece la pertenencia de un elemento HTML a un grupo (o clase).</p>
+					        <pre><code class="hljs" data-trim contenteditable>
+                                &lt;script&gt;
+                                  function changeColor() {
+                                    var x = document.getElementsByClassName("clase01");
+                                    var i;
+                                    for (i = 0; i &lt; x.length; i++) {
+                                      x[i].style.backgroundColor = "red";
+                                    }
+                                  }
+                                &lt;/script&gt;
+
+                                &lt;button type="button" onclick="changeColor();"&gt;Presióneme&lt;/button&gt;		
+                                
+                                &lt;h1 id="id01" class="clase01"&gt;Primer encabezado&lt;/h1&gt;
+                                &lt;h1 id="id02" class="clase01"&gt;Segundo encabezado&lt;/h1&gt;
+					        </code></pre>	
+					    </ul>
+				</section>																		
+				<section>
+					<h2>Programación Orientada a Objetos (POO)</h2>
+					    <ul>
+					        <p>Los <a href="https://www.w3schools.com/js/js_objects.asp">objetos</a> son entidades que poseen:
+					            <ul>
+					                <li><strong>Estado</strong>: representado por un conjunto de variables llamadas <strong>propiedades</strong>.</li>
+					                <li><strong>Comportamiento</strong>: representado por un conjunto de funciones llamadas <strong>métodos</strong>.</li>
+					            </ul>
+					        </p>
+					        <p>
+                                Los objetos pertenecen a grupos llamados <strong>clases</strong>.
+					        </p>
+					    </ul>
+				</section>		
+				<section>
+					<h2>POO: clases</h2>
+					    <ul>
+					        <p>
+                                Todos los objetos de una clase comparten los mismos métodos y propiedades.
+					        </p>
+					        <p>
+					            Una clase puede verse como una plantilla o “machote” a partir de la cual se crean objetos.
+					        </p>
+					        <p>
+					            A un objeto creado a partir de una clase se le llama también una <strong>instancia</strong> de esa clases.
+					        </p>
 					    </ul>
 				</section>
 				<section>
-					<h2>Ejercicio</h2>
+					<h2>POO: constructores</h2>
 					    <ul>
-    			            <p>Cree un archivo llamado estilos.css que, para los tres archivos, especifique: el tipo y tamaño de letra, el color de fondo y el color de los encabezados.</p>
-    			            <p>En cada página, cree una barra de navegación que permita navegar a las otras dos páginas. Para esto utilice el elemento <a href="https://www.w3schools.com/tags/tag_nav.asp">nav</a>.</p>
-				            <p>Referencie las diferentes fuentes de información (textos, imágenes, etc.). Utilice los elementos <a href="https://www.w3schools.com/tags/tag_cite.asp">cite</a> y <a href="https://www.w3schools.com/tags/tag_figure.asp">figure</a>.</p>
+					        <p>
+                                En JS, un nuevo objeto (o instancia) de una clase se con la palabra reservada <strong>new</strong>.
+					        </p>
+					        <pre><code class="hljs" data-trim contenteditable>
+                                var person1 = new Person('Bob');
+                                var person2 = new Person('Sarah');
+					        </code></pre>	
+					        <p>
+                                En este ejemplo, se crean dos objetos de la clase "Person" y se inicializan con los nombres de las personas.
+					        </p>					        
+					    </ul>
+				</section>		
+				<section>
+					<h2>JS: listas de propiedades</h2>
+					    <ul>
+					        <p>
+                                En JS, los objetos (y otras estructuras) pueden representarse mediante listas de tuplas de la forma <em>propiedad:valor</em>
+					        </p>
+					        <pre><code class="hljs" data-trim contenteditable>
+                                var person = {firstName:"John", lastName:"Doe", age:30, eyeColor:"green"};
+                            </code></pre>	
+					        <p>
+                                En este ejemplo, se especifican cuatro propiedades de una persona, con sus respectivos valores.
+					        </p>					        
+					    </ul>
+				</section>																																
+				<section>
+					<h2>Recursos sobre JavaScript</h2>
+					    <ul>
+					        <li><a href="https://www.w3schools.com/js/">W3Schools</a></li>					    
+					        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Mozilla Developer Network</a></li>
 					    </ul>
 				</section>				
 			</div>
