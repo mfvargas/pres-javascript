@@ -78,6 +78,7 @@
                                     &lt;title&gt;Hola mundo&lt;/title&gt;
                                     &lt;meta charset="UTF-8"&gt; 
                                     &lt;script&gt;
+                                        /* Función que imprime "¡Hola mundo!" */
                                         function holaMundo () {
                                             alert("¡Hola mundo!");
                                         }        
@@ -90,13 +91,14 @@
                                 &lt;/body&gt;
                             &lt;/html&gt;
 					    </code></pre>
-				</section>	
+				</section>
 				<section>
 					<h2>El tag &lt;script&gt;</h2>
 					    <ul>
 					        <p>El tag <a href="https://www.w3schools.com/tags/tag_script.asp">&lt;script&gt;</a> se utiliza para incluir un <em>script</em> en JS. Puede contener el código o una referencia a un archivo.</p>
 					        <pre><code class="hljs" data-trim contenteditable>
                                 &lt;script&gt;
+                                    /* Función que imprime la hilera "¡Hola mundo!" */
                                     function holaMundo () {
                                         alert("¡Hola mundo!");
                                     }        
@@ -104,10 +106,327 @@
                                 
                                 &lt;script src="js/misfunciones.js"&gt;&lt;/script&gt;
                                 
-                                &lt;script src="https://maps.googleapis.com/maps/api/js"&gt;&lt;/script&gt;
+                                &lt;script src="https://maps.googleapis.com/maps/api/js"&gt;&lt;/script&gt;       
 					        </code></pre>					        
 					    </ul>
+				</section>		
+				<section>
+					<h2>Comentarios</h2>
+					    <ul>
+					        <p>Para varias líneas</p>
+					        <pre><code class="hljs" data-trim contenteditable>
+                    /* Este es un
+                       comentario de
+                       varias líneas 
+                    */
+					        </code></pre>
+					        <p>Para una línea</p>
+					        <pre><code class="hljs" data-trim contenteditable>
+                      var i = 1; // contador inicializado en 1       
+                      var j = 2; // contador inicializado en 2       
+					        </code></pre>					    
+					    </ul>
+				</section>						
+				<section>
+					<h2>Declaración e inicialización de variables</h2>
+					    <ul>
+					        <p>Se declaran con la palabra reservada <strong>var</strong></p>
+					        <p>Se inicializan con el operador <strong>=</strong></p>
+					        <pre><code class="hljs" data-trim contenteditable>
+                                var lenguaje;
+                                var numeroAureo, pi;
+                                var esBisiesto = false;                                
+                                
+                                lenguaje = "JavaScript";
+                                numeroAureo = 1.61803, pi = 3.14;
+					        </code></pre>
+					        <p>El operador <strong>=</strong> se usa también para actualizar los valores de las variables, después de inicializarlas</p>
+					    </ul>
+				</section>	
+				<section>
+					<h2>Tipos de datos: númericos</h2>
+					    <ul>
+					        <p>Incluye números tanto enteros como decimales.</p>
+					        <pre><code class="hljs" data-trim contenteditable>
+                                var cantidadEstudiantes = 12;
+                                var pi = 3.14;
+                                
+                                x1 = 1, x2 = 2, x3 = 4, x3 = 8, x4 = 16;
+                                
+                                suma = 10 + 20; resta = 20 - 2;
+                                multiplicacion = 2 * 3; divison = 2.4 * 4.7;
+                                
+                                i = 10; j = 20;
+                                i++; // Resultado: 11
+                                j--; // Resultado: 19
+					        </code></pre>
+					    </ul>					    
 				</section>
+				<section>
+					<h2>Tipos de datos: textuales</h2>
+					    <ul>
+					        <p>Son hileras de texto escritas entre comillas simples o dobles.</p>
+					    </ul>					
+					    <pre><code class="hljs" data-trim contenteditable>
+                            var continente = "América";
+                            var pais = "Costa Rica", provincia = 'Heredia';
+                            
+                            cita = "'Solo sé que no sé nada...', Sócrates";
+                            
+                            nombreCompleto = "John" + " " + "Doe"; // resultado: "John Doe"           
+					    </code></pre>
+				</section>
+				<section>
+					<h2>Tipos de datos: booleanos</h2>
+					    <ul>
+					        <p>Tienen el valor de verdadero (<strong>true</strong>) o falso (<strong>false</strong>).</p>
+					    </ul>					
+					    <pre><code class="hljs" data-trim contenteditable>
+                            var esBisiesto = true;
+                            var esLunes = false;
+                            
+                            // "Y" lógico (AND)
+                            2 > 1 && 2 == (1 + 1); // Resultado: true;
+
+                            // "O" lógico (OR)
+                            1 > 2 || 4 < 3; // Resultado: false;
+                            
+                            // "No" lógico (NOT)
+                            !(2 > 1); // Resultado: false;
+					    </code></pre>
+				</section>
+				<section>
+					<h2>Tipos de datos: arreglos (<em>arrays</em>)</h2>
+					    <ul>
+					        <p>Son objetos con múltiples valores separados por comas.</p>
+					    </ul>					
+					    <pre><code class="hljs" data-trim contenteditable>
+                            var nombres = ['Carlos', 'Lucía', 'Jorge'];
+                            var numeros = [20, 9, 10.3];
+                            
+                            nombres[0]; // Resultado: 'Carlos'
+                            numeros[2]; // Resultado: 10.3
+					    </code></pre>
+				</section>	
+				<section>
+					<h2>Objetos</h2>
+					    <ul>
+					        <p>Son estructuras compuestas por listas de tuplas de la forma <em>propiedad:valor</em></p>
+					    </ul>					
+					    <pre><code class="hljs" data-trim contenteditable>
+                            var perro = {nombre:'Lassie', raza:'Collie', sexo:'Femenino', edad:7 };       
+                            
+                            perro.nombre; // Resultado: 'Lassie'
+                            perro.edad; // Resultado: 7
+					    </code></pre>
+				</section>
+				<section>
+					<h2>Funciones</h2>
+					    <ul>
+					        <p>Declaración</p>
+					        <pre><code class="hljs" data-trim contenteditable>
+                      function [nombre-función] ([arg1], [arg2], ..., [argn]) {       
+                        [cuerpo-función]
+                        
+                        return [valor-retorno]
+                      }
+					        </code></pre>
+					        <p>Ejemplo</p>
+					        <pre><code class="hljs" data-trim contenteditable>
+                      function cuadrado (numero) {
+                        c = numero * numero;
+                        
+                        return c;
+                      }
+                      
+                      cantidad = cuadrado(8);
+					        </code></pre>					    
+					    </ul>
+				</section>
+				<section>
+					<h2>Condicionales: if</h2>
+					    <ul>
+					        <p>Sintaxis</p>
+					        <pre><code class="hljs" data-trim contenteditable>
+                      if ([condición]) {
+                        [código a ejecutarse si la condición es verdadera];       
+                      }
+					        </code></pre>
+					        <p>Ejemplo</p>
+					        <pre><code class="hljs" data-trim contenteditable>
+                      var x = 2, y = 4;
+                      if (x < y) {
+                        alert("x es menor o igual que y");
+                      }
+					        </code></pre>					    
+					    </ul>
+				</section>
+				<section>
+					<h2>Condicionales: if - else</h2>
+					    <ul>
+					        <p>Sintaxis</p>
+					        <pre><code class="hljs" data-trim contenteditable>
+                      if ([condición]) {
+                        [código a ejecutarse si la condición es verdadera];       
+                      } else {
+                        [código a ejecutarse si la condición es falsa];       
+                      }
+					        </code></pre>
+					        <p>Ejemplo</p>
+					        <pre><code class="hljs" data-trim contenteditable>
+                      var x = 2, y = 4;
+                      if (x < y) {
+                        alert("x es menor o igual que y");
+                      } else {
+                        alert("x es mayor o igual que y");
+                      }
+					        </code></pre>
+					    </ul>
+				</section>
+				<section>
+					<h2>if - else if - else</h2>
+					    <ul>
+					        <pre><code class="hljs" data-trim contenteditable>
+                      if ([condición-1]) {
+                        [código a ejecutarse si la condición-1 es verdadera];
+                      } else if [condición-n]{
+                        [código a ejecutarse si la condición-n es verdadera];
+                      } else {
+                        [código a ejecutarse si todas las condiciones son falsas];        
+                      }
+					        </code></pre>					
+			            <p>Ejemplo</p>
+					        <pre><code class="hljs" data-trim contenteditable>
+                      var x = 2, y = 4;
+                      if (x < y) {
+                        alert("x es menor o igual que y");
+                      } else if (x > y) {
+                        alert("x es mayor que y");
+                      } else {
+                        alert("x es igual a y");
+                      }
+					        </code></pre>				            
+					    </ul>					
+				</section>
+				<section>
+					<h2>Condicionales: switch</h2>
+					    <ul>
+					        <p>Sintaxis</p>
+					        <pre><code class="hljs" data-trim contenteditable>
+                    switch ([expresión]) {
+                      case [opción-1]:
+                        [código a ejecutarse para la opción-1]
+                        break;
+                      case [opción-n]:
+                        [código a ejecutarse para la opción-n]
+                        break;
+                      default:
+                        [código a ejecutarse si no se cumple ninguna opción]
+                    }
+					        </code></pre>			
+					        <p><strong>break</strong> detiene la ejecución e impide que las otras opciones sean evaluadas</p>		
+					    </ul>
+				</section>						
+				<section>
+					<h2>Condicionales: switch</h2>
+					    <ul>
+					        <p>Ejemplo</p>
+					        <pre><code class="hljs" data-trim contenteditable>
+                    codigoMes = 1;
+                    switch (codigoMes) {
+                      case 1:
+                        nombreMes = "Enero";
+                        break;
+                      case 2:
+                        nombreMes = "Febrero";
+                        break;
+                      case 3:
+                        nombreMes = "Marzo";
+                        break;                        
+                      default:
+                        nombreMes = "Otro";
+                    }
+                    alert(nombreMes);
+					        </code></pre>					
+					    </ul>
+				</section>
+				<section>
+					<h2>Ciclos: for</h2>
+					    <ul>
+					        <p>Sintaxis</p>
+					        <pre><code class="hljs" data-trim contenteditable>
+                    for ([expresión-inicial];[condición]; [expresión-incremento]) {          
+                      [cuerpo-ciclo]
+                    }
+					        </code></pre>				
+					        <p>Ejemplo</p>
+					        <pre><code class="hljs" data-trim contenteditable>
+                    // Imprime los cuadrados de i, para i en [1..3]
+                    for (i = 1; i <= 3; i++) {          
+                      alert(i * i);
+                    }
+					        </code></pre>							        	
+					    </ul>
+				</section>
+				<section>
+					<h2>Ciclos: while</h2>
+					    <ul>
+					        <p>Sintaxis</p>
+					        <pre><code class="hljs" data-trim contenteditable>
+                    while ([condición]) {          
+                      [cuerpo-ciclo]
+                    }
+					        </code></pre>				
+					        <p>Ejemplo</p>
+					        <pre><code class="hljs" data-trim contenteditable>
+                    // Imprime los cuadrados de i, para i en [1..3]           
+                    var i = 1;
+                    while (i <= 3) {          
+                      alert(i * i);
+                    }
+					        </code></pre>							        	
+					    </ul>
+				</section>				
+				<section>
+					<h2>Ciclos: for..in</h2>
+					    <ul>
+					        <p>Sintaxis</p>
+					        <pre><code class="hljs" data-trim contenteditable>
+                    for ([variable] in [objeto]) {          
+                      [cuerpo-ciclo]
+                    }
+					        </code></pre>				
+					        <p>Ejemplo</p>
+					        <pre><code class="hljs" data-trim contenteditable>
+                    // Imprime los valores de las propiedades de un objeto
+                    var perro = {nombre:'Lassie', raza:'Collie', sexo:'Femenino', edad:7 };           
+                    for (i in perro) {          
+                      alert(perro[i]);
+                      i++;
+                    }
+					        </code></pre>							        	
+					    </ul>
+				</section>
+				<section>
+					<h2>Ciclos: do..while</h2>
+					    <ul>
+					        <p>Sintaxis</p>
+					        <pre><code class="hljs" data-trim contenteditable>
+                    do {          
+                      [cuerpo-ciclo]
+                    } while ([condición]);
+					        </code></pre>				
+					        <p>Ejemplo</p>
+					        <pre><code class="hljs" data-trim contenteditable>
+                    // Imprime los cuadrados de i, para i en [1..3]           
+                    var i = 1;
+                    do {          
+                      alert(i * i);
+                      i++;
+                    } while (i <= 3);
+					        </code></pre>							        	
+					    </ul>
+				</section>				
 				<section>
 					<h2>Eventos en HTML y JS</h2>
 					    <ul>
@@ -115,7 +434,7 @@
 					        </p>
 					        <pre><code class="hljs" data-trim contenteditable>
                                 &lt;button type="button" onclick="alert('¡Hola mundo!');"&gt;
-                                    Presióneme
+                                    Hola mundo
                                 &lt;/button&gt;
 					        </code></pre>					        
 					    </ul>
@@ -222,17 +541,12 @@
 					    </ul>
 				</section>		
 				<section>
-					<h2>JS: listas de propiedades</h2>
+					<h2>Recomendaciones para programar en JS</h2>
 					    <ul>
-					        <p>
-                                En JS, los objetos (y otras estructuras) pueden representarse mediante listas de tuplas de la forma <em>propiedad:valor</em>
-					        </p>
-					        <pre><code class="hljs" data-trim contenteditable>
-                                var person = {firstName:"John", lastName:"Doe", age:30, eyeColor:"green"};
-                            </code></pre>	
-					        <p>
-                                En este ejemplo, se especifican cuatro propiedades de una persona, con sus respectivos valores.
-					        </p>					        
+					        <li><strong>Tabule</strong> con dos espacios</li>
+					        <li>Finalice todas las sentencias con <strong>punto y coma (;)</strong></li>
+					        <li>Divida la lógica del programa en <strong>funciones</strong></li>
+					        <li>Mantenga el código JS en un <strong>archivo separado</strong> de la sintaxis de HTML y CSS</li>
 					    </ul>
 				</section>																																
 				<section>
@@ -260,7 +574,7 @@
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				],
 	            // Display the page number of the current slide
-	            slideNumber: false		
+	            slideNumber: true		
 			});
 		</script>
 	</body>
