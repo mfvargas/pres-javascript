@@ -30,28 +30,28 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>
+				<section id="portada">
 					<h2>JavaScript</h2>
 					<br>
 					<small>Manuel Vargas (<a href="mailto:mfvargas@gmail.com">mfvargas@gmail.com</a>)</small>
 					<br>
 					<small>Octubre de 2019</small>
 				</section>
-				<section>
+				<section id="javascript">
 					<h2>JavaScript</h2>
 					    <ul>
 					        <p><strong>JavaScript (JS)</strong> es un lenguaje de programación utilizado para añadir <strong>interactividad</strong> a las páginas web.</p>
 					        <p>Junto con HTML y CSS, JS es una de las tres principales tecnologías para la producción de contenido en la Web.</p>
 					    </ul>
 				</section>
-				<section>
+				<section id="historia">
 					<h2>Historia de JavaScript</h2>
 					    <ul>
 					        <p>Fue creado en 1995 por <strong>Brendan Eich</strong>, con el fin de dar interactividad a las páginas web leídas con el navegador <a href="https://en.wikipedia.org/wiki/Netscape_%28web_browser%29">Netscape</a>.</p>
 					        <p>En la actualidad, es utilizado por todos los <a href="https://en.wikipedia.org/wiki/Usage_share_of_web_browsers">principales navegadores web</a> y en la mayoría de los sitios web.</p>
 					    </ul>
 				</section>
-				<section>
+				<section id="caracteristicas">
 					<h2>Características de JavaScript</h2>
 					    <ul>
 					        <li>Se ejecuta en el <strong>cliente (i.e. navegador web)</strong></li>
@@ -59,7 +59,7 @@
 					        <li>Permite el uso de varios paradigmas de programación, incluyendo la <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS">programación orientada a objetos</a></li>
 					    </ul>
 				</section>
-				<section>
+				<section id="capacidades">
 					<h2>¿Qué puede hacerse con JavaScript?</h2>
 					    <ul>
 					        <li>Controlar multimedia</li>
@@ -69,7 +69,7 @@
 					        <li>Y muchas, muchas, cosas más...</li>
 					    </ul>
 				</section>
-				<section>
+				<section id="holamundo">
 					<h2>"Hola mundo" en JavaScript</h2>
 					    <pre><code class="hljs" data-trim contenteditable>
                             &lt;!DOCTYPE html&gt;
@@ -110,7 +110,7 @@
 					        </code></pre>					        
 					    </ul>
 				</section>		
-				<section>
+				<section id="comentarios">
 					<h2>Comentarios</h2>
 					    <ul>
 					        <p>Para varias líneas</p>
@@ -127,7 +127,7 @@
 					        </code></pre>					    
 					    </ul>
 				</section>						
-				<section>
+				<section id="variables">
 					<h2>Declaración e inicialización de variables</h2>
 					    <ul>
 					        <p>Se declaran con la palabra reservada <strong>var</strong></p>
@@ -143,7 +143,7 @@
 					        <p>El operador <strong>=</strong> se usa también para actualizar los valores de las variables, después de inicializarlas</p>
 					    </ul>
 				</section>	
-				<section>
+				<section id="numeros">
 					<h2>Tipos de datos: númericos</h2>
 					    <ul>
 					        <p>Incluye números tanto enteros como decimales.</p>
@@ -162,7 +162,7 @@
 					        </code></pre>
 					    </ul>					    
 				</section>
-				<section>
+				<section id="textos">
 					<h2>Tipos de datos: textuales</h2>
 					    <ul>
 					        <p>Son hileras de texto escritas entre comillas simples o dobles.</p>
@@ -176,7 +176,7 @@
                             nombreCompleto = "John" + " " + "Doe"; // resultado: "John Doe"           
 					    </code></pre>
 				</section>
-				<section>
+				<section id="booleanos">
 					<h2>Tipos de datos: booleanos</h2>
 					    <ul>
 					        <p>Tienen el valor de verdadero (<strong>true</strong>) o falso (<strong>false</strong>).</p>
@@ -195,7 +195,7 @@
                             !(2 > 1); // Resultado: false;
 					    </code></pre>
 				</section>
-				<section>
+				<section id="arreglos">
 					<h2>Tipos de datos: arreglos (<em>arrays</em>)</h2>
 					    <ul>
 					        <p>Son objetos con múltiples valores separados por comas.</p>
@@ -208,7 +208,7 @@
                             numeros[2]; // Resultado: 10.3
 					    </code></pre>
 				</section>	
-				<section>
+				<section id="objetos">
 					<h2>Objetos</h2>
 					    <ul>
 					        <p>Son estructuras compuestas por listas de tuplas de la forma <em>propiedad:valor</em></p>
@@ -220,7 +220,7 @@
                             perro.edad; // Resultado: 7
 					    </code></pre>
 				</section>
-				<section>
+				<section id="funciones">
 					<h2>Funciones</h2>
 					    <ul>
 					        <p>Declaración</p>
@@ -243,7 +243,7 @@
 					        </code></pre>					    
 					    </ul>
 				</section>
-				<section>
+				<section id="if">
 					<h2>Condicionales: if</h2>
 					    <ul>
 					        <p>Sintaxis</p>
@@ -261,7 +261,7 @@
 					        </code></pre>					    
 					    </ul>
 				</section>
-				<section>
+				<section id="if-else">
 					<h2>Condicionales: if - else</h2>
 					    <ul>
 					        <p>Sintaxis</p>
@@ -283,7 +283,7 @@
 					        </code></pre>
 					    </ul>
 				</section>
-				<section>
+				<section id="if-else-if">
 					<h2>if - else if - else</h2>
 					    <ul>
 					        <pre><code class="hljs" data-trim contenteditable>
@@ -308,7 +308,7 @@
 					        </code></pre>				            
 					    </ul>					
 				</section>
-				<section>
+				<section id="switch">
 					<h2>Condicionales: switch</h2>
 					    <ul>
 					        <p>Sintaxis</p>
@@ -350,7 +350,7 @@
 					        </code></pre>					
 					    </ul>
 				</section>
-				<section>
+				<section id="for">
 					<h2>Ciclos: for</h2>
 					    <ul>
 					        <p>Sintaxis</p>
@@ -368,7 +368,7 @@
 					        </code></pre>							        	
 					    </ul>
 				</section>
-				<section>
+				<section id="while">
 					<h2>Ciclos: while</h2>
 					    <ul>
 					        <p>Sintaxis</p>
@@ -387,7 +387,7 @@
 					        </code></pre>							        	
 					    </ul>
 				</section>				
-				<section>
+				<section id="for-in">
 					<h2>Ciclos: for..in</h2>
 					    <ul>
 					        <p>Sintaxis</p>
@@ -407,7 +407,7 @@
 					        </code></pre>							        	
 					    </ul>
 				</section>
-				<section>
+				<section id="do-while">
 					<h2>Ciclos: do..while</h2>
 					    <ul>
 					        <p>Sintaxis</p>
@@ -427,7 +427,7 @@
 					        </code></pre>							        	
 					    </ul>
 				</section>				
-				<section>
+				<section id="eventos">
 					<h2>Eventos en HTML y JS</h2>
 					    <ul>
 					        <p>Los <a href="https://www.w3schools.com/js/js_events.asp">eventos</a> son fragmentos de código que se activan con la ocurrencia de sucesos como, por ejemplo: terminar la carga de una página web, llenar un campo de entrada de datos o presionar un <a href="https://www.w3schools.com/tags/tag_button.asp">botón</a>.
@@ -439,20 +439,20 @@
 					        </code></pre>					        
 					    </ul>
 				</section>	
-				<section>
+				<section id="dom-01">
 					<h2>El Document Object Model</h2>
 					    <ul>
 					        <p><figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/DOM-model.svg/500px-DOM-model.svg.png" alt="Elemento HTML" width="450"><figcaption><small>El Document Object Model (DOM). Fuente: <a href="https://commons.wikimedia.org/wiki/Category:Document_object_models#/media/File:DOM-model.svg">Wikipedia</a></small></figcaption></figure></p>
 					    </ul>
 				</section>	
-				<section>
+				<section id="dom-02">
 					<h2>El Document Object Model</h2>
 					    <ul>
                             <p>El <a href="https://www.w3schools.com/js/js_htmldom.asp">Document Object Model (DOM)</a> es una representación jerárquica de los objetos que componen una página web.</p>
                             <p>Es también una interfaz de programación que permite que un programador tenga acceso para leer y modificar los elementos, atributos, estilos y eventos de un documento HTML.</p>
                         </ul>
 				</section>	
-				<section>
+				<section id="dom-03">
 					<h2>Acceso al DOM mediante JS</h2>
 					    <ol>
                             <li>Observe el <a href="https://codepen.io/mfvargas/pen/rzKggx">ejemplo en CodePen</a></li>
@@ -461,7 +461,7 @@
                             <li>Reproduzca el ejemplo en tres archivos en su computadora: <em>index.html</em>, <em>css/estilos.css</em> y <em>js/funciones.js</em>. Recuerde establecer (con &lt;link&gt; y &lt;script&gt;) los enlaces a los otros archivos desde <em>index.html</em>.</li>
                         </ul>
 				</section>
-			    <section>
+			    <section id="id">
 					<h2>El atributo id</h2>
 					    <ul>
 					        <p>El <a href="https://www.w3schools.com/tags/att_global_id.asp">atributo id</a> establece un identificador único para cada elemento HTML de una página. Es utilizado en JS para acceder programáticamente al DOM.</p>
@@ -475,7 +475,7 @@
 					        </code></pre>	
 					    </ul>
 				</section>
-			    <section>
+			    <section id="class">
 					<h2>El atributo class</h2>
 					    <ul>
 					        <p>El <a href="https://www.w3schools.com/tags/att_global_class.asp">atributo class</a> establece la pertenencia de un elemento HTML a un grupo (o clase).</p>
@@ -497,7 +497,7 @@
 					        </code></pre>	
 					    </ul>
 				</section>																		
-				<section>
+				<section id="poo">
 					<h2>Programación Orientada a Objetos (POO)</h2>
 					    <ul>
 					        <p>Los <a href="https://www.w3schools.com/js/js_objects.asp">objetos</a> son entidades que poseen:
@@ -511,7 +511,7 @@
 					        </p>
 					    </ul>
 				</section>		
-				<section>
+				<section id="poo-clases">
 					<h2>POO: clases</h2>
 					    <ul>
 					        <p>
@@ -525,7 +525,7 @@
 					        </p>
 					    </ul>
 				</section>
-				<section>
+				<section id="poo-constructores">
 					<h2>POO: constructores</h2>
 					    <ul>
 					        <p>
@@ -540,7 +540,7 @@
 					        </p>					        
 					    </ul>
 				</section>		
-				<section>
+				<section id="recomendaciones">
 					<h2>Recomendaciones para programar en JS</h2>
 					    <ul>
 					        <li><strong>Tabule</strong> con dos espacios</li>
@@ -549,7 +549,7 @@
 					        <li>Mantenga el código JS en un <strong>archivo separado</strong> de la sintaxis de HTML y CSS</li>
 					    </ul>
 				</section>																																
-				<section>
+				<section id="recursos">
 					<h2>Recursos sobre JavaScript</h2>
 					    <ul>
 					        <li><a href="https://www.w3schools.com/js/">W3Schools</a></li>					    
